@@ -14,5 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return 'Unauthorized.';
+});
+
+Route::get('/descarga.zip', function () {
+    return redirect('storage/sisrmyc.zip');
+});
+
+Route::get('/descarga', function () {
+    return redirect('storage/sisrmyc.exe');
 });
